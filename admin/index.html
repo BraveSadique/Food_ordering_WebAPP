@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://unpkg.com/dropzone@5/dist/min/dropzone.min.css" type="text/css" />
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="icon" type="image/x-icon" href="/admin/img/dashboard.ico">
+
+</head>
+
+<body>
+    <main class="main">
+        <div class="sidebar">
+            <div class="account">
+                <span class="account__avatar">
+                    <i class="fa-solid fa-circle-user"></i>
+                </span>
+                <h2 class="name">Admin</h2>
+            </div>
+            <nav class="admin__nav admin">
+                <ul class="admin__list">
+                    <li class="admin__list-item activeMenu" data-name="dashboard">
+                        <span><i class="icon fa-solid fa-house"></i> Dashboard</span>
+                    </li>
+                    <li class="admin__list-item" data-name="categories">
+                        <span><i class="icon fa-solid fa-table-list"></i> Categories</span>
+                    </li>
+                    <li class="admin__list-item" data-name="products">
+                        <span><i class="icon fa-solid fa-table"></i> Products</span>
+
+                    </li>
+                    <li class="admin__list-item" data-name="discount">
+                        <span><i class="icon fa-solid fa-tag"></i> discount</span>
+                    </li>
+                </ul>
+            </nav>
+            <a class="redirect" href="../shop.html" target="_blank"><i class="fa-solid fa-arrow-right-long" style="margin-right:5px ;"></i> Go to website </a>
+        </div>
+
+        <div class="admin__body">
+            <div class="admin__slides dashboard__slide activeSlide" data-name="dashboard">
+                <h1 class="dashboard__title">Dashboard</h1>
+                <p class="dashboard__subtitle">Welcome back to the Dashboard</p>
+                <div class="dashboard__section">
+                    <div class="dashboard__info dashCat">
+                        <span class="dashIcon"><i class="icon fa-solid fa-table-list"></i></span>
+                        <h2 class="dashCount" id="dashCategories"></h2>
+                        <p class="dashTxt">Categories</p>
+                    </div>
+                    <div class="dashboard__info dashProd">
+                        <span class="dashIcon"><i class="icon fa-solid fa-table"></i></span>
+                        <h2 class="dashCount" id="dashproducts"></h2>
+                        <p class="dashTxt">Products</p>
+                    </div>
+                    <div class="dashboard__info dashDis">
+                        <span class="dashIcon"><i class="icon fa-solid fa-tag"></i></span>
+                        <h2 class="dashCount" id="dashCount"></h2>
+                        <p class="dashTxt">Discounted Products</p>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="admin__slides categories__slide" data-name="categories">
+                <a class="addBtn" id="addCategory" href="#">Add Category</a>
+                <table class="table" id="category__table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Category</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tBody">
+                    </tbody>
+                </table>
+
+            </div>
+            <div class="admin__slides products__slide" data-name="products">
+                <a id="addProduct" class="addBtn" href="#">Add Product</a>
+    <table class="product__table table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>name</th>
+                <th style="width: 300px;">description</th>
+                <th>price</th>
+                <th>discount</th>
+                <th>discounted price</th>
+                <th>category</th>
+                <th>image</th>
+                <th>action</th>
+            </tr>
+          </thead>
+          <tbody id="tBody2">
+ 
+          </tbody>
+    </table>
+            </div>
+            <div class="admin__slides discount__slide"  data-name="discount">
+                <h1 class="dashboard__title">Discount</h1>
+                <div class="discount__section">
+                    <div class="discount">
+                        <h3 class="discount__smTitle">discount product</h3>
+                        <form id="discountForm">
+                            <select name="" id="discountSelect"></select>
+                            <input type="number" id="percent" required  min="0" max="100" maxlength="3">
+                            <button type="submit" class="addDiscount">Add discount</button>
+                        </form>
+                        <div id="responseInfo" class="responseInfo">
+                            <p id="respsoneText" class="respsoneText" >This product has been discounted 5%</p>
+                            <button id="responseBtn" class="responseBtn" type="button"> OK</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+<div class="modal__body ">
+    <div class="modal">
+    </div>
+</div>
+    <script src="https://unpkg.com/dropzone@5/dist/min/dropzone.min.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/addCategory.js"></script>
+    <script src="js/editCategory.js"></script>
+    <script src="js/addProduct.js"></script>
+    <script src="js/editProducts.js"></script>
+
+</body>
+
+</html>
+

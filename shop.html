@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/www/css/font.css">
+    <link rel="stylesheet" href="/www/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section class="hero">
+        <div class="hero__header">
+            <a href="#" class="logo">StepFood</a>
+            <nav class="hero__menu menu">
+                <ul class="menu__list">
+                    <li class="menu__list-item list-item"><a href="#" class="list__item-link">home</a></li>
+                    <li class="menu__list-item list-item"><a href="#" class="list__item-link">about</a></li>
+                    <li class="menu__list-item list-item"><a href="#" class="list__item-link">offers</a></li>
+                    <li class="menu__list-item list-item"><a href="#menu__section" class="list__item-link">menu</a></li>
+                    <li class="menu__list-item list-item"><a href="#" class="list__item-link">contact</a></li>
+                </ul>
+                <a href="/cart.html" class="shopping__cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="shopping__circle">0</span>
+                </a>
+            </nav>
+        </div>
+        <div class="container">
+        <div class="hero__content">
+            <div class="hero__content-text">
+                <h1 class="hero__title">Fast Food Restaurant</h1>
+                <p class="hero__info">Doloremque, itaque aperiam facilis rerum, commodi, temporibus sapiente ad mollitia laborum quam quisquam esse error unde. Tempora ex doloremque, labore, sunt repellat dolore, iste magni quos nihil ducimus libero ipsam.</p>
+                <a href="#" class="hero__btn"> Order Now</a>
+            </div>
+            <div class="hero__content-img">
+                <img src="/www/img/pizza.png" alt="pizza">
+            </div>
+        </div>
+        </div>
+    </section>
+    <section class="menu__section" id="menu__section">
+       <div class="container">
+           <h2 class="menu__section-title">Our Menu</h2>
+           <nav class="menu__section-nav menu">
+               <ul class="menu__list" id="menu">
+            </ul>
+            <a href="/cart.html" class="footerCart" id="shopping__cart">
+                <i class="fa-solid fa-cart-shopping"></i>
+                <span class="footer__shopping-circle" id="shopping__footer">0</span>
+            </a>
+        </nav>
+        <div class="center">
+            <div class="menu__section-products" id="product_list">
+            </div>
+        </div>
+       </div>
+    </section>
+    <div class="modal__body">
+        <div class="modal"></div>
+    </div>
+    <script src="/www/js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping cart</title>
+    <link rel="stylesheet" href="/www/css/font.css">
+    <link rel="stylesheet" href="/www/css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css" integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <section class="cart__section">
+        <h1 class="cart__section-title">Shopping Cart</h1>
+        <p class="cart__itemsCount" id="cart__itemsCount"></p>
+        <div class="container">
+            <div class="cart__productList" id="cart__productList">
+                <table class="cart__productsTable" id="productsTable">
+                    <thead>
+                        <tr>
+                            <th class="bigTh">product</th>
+                            <th>price</th>
+                            <th>quantity</th>
+                            <th>action</th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart__tableBody">
+                    </tbody>
+                </table>
+                <div class="footer">
+                    <a href="/shop.html" class="back"><i class="fa-solid fa-arrow-left-long"></i> Continue Shopping</a>
+                    <div class="totalPrice">
+                        <p class="totalPrice__title">Total Price:</p>
+                        <p class="totalPrice__txt" id="total">4500$</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+
+
+    <script src="/www/js/cart.js"></script>
+</body>
+</html>
